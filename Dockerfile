@@ -1,5 +1,5 @@
 FROM alpine:3.19.1
-LABEL maintainer="JulianPrieber"
+LABEL maintainer="Prakash Divy"
 LABEL description="LinkStack Docker"
 
 EXPOSE 80 443
