@@ -28,6 +28,7 @@ jobs:
         with:
           dev: no
           working_dir: "linkstack"
+          php_extensions: zip gd
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
