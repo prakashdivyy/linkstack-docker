@@ -18,10 +18,14 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Remove linkstack folder
         run: rm -rf linkstack
-      - uses: actions/checkout@master
+      - name: Checkout linkstack
+        uses: actions/checkout@v4
         with:
-          name: LinkStackOrg/LinkStack
+          repository: LinkStackOrg/LinkStack
           ref: ${{ github.ref_name }}
+          path: linkstack
+      - name: Test run ls
+        run: ls -al
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
