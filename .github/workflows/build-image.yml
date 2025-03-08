@@ -16,6 +16,8 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Remove linkstack folder
         run: rm -rf linkstack
       - name: Checkout linkstack
