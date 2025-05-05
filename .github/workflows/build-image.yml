@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Remove linkstack folder
-        run: rm -rf linkstack
+      - name: Remove linkstack folder and README.md
+        run: rm -rf linkstack README.md
       - name: Download linkstack from GitHub
         run: wget https://github.com/linkstackorg/linkstack/releases/latest/download/linkstack.zip
       - name: Extract linkstack
